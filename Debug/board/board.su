@@ -1,0 +1,2 @@
+C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\drivers/fsl_clock.h:469:20:CLOCK_SetLpuart0Clock	16	static
+../board/board.c:25:6:BOARD_InitDebugConsole	16	static
