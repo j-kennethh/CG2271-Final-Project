@@ -102,10 +102,10 @@ instance:
       - clkConfig_struct:
         - clockSource: 'kSLCD_AlternateClk1'
         - clockSourceFreq: 'ClocksTool_DefaultInit'
-        - altClkDivider1: 'kSLCD_AltClkDivFactor1'
+        - altClkDivider1: 'kSLCD_AltClkDivFactor512'
         - fastFrameRateEnable: 'false'
-        - clkPrescaler: 'kSLCD_ClkPrescaler00'
-      - dutyCycle: 'kSLCD_1Div1DutyCycle'
+        - clkPrescaler: 'kSLCD_ClkPrescaler07'
+      - dutyCycle: 'kSLCD_1Div4DutyCycle'
       - displayMode: 'kSLCD_NormalMode'
       - loadAdjust: 'kSLCD_LowLoadOrFastestClkSrc'
       - lowPowerBehavior: 'kSLCD_EnabledInWaitStop'
@@ -331,7 +331,7 @@ slcd_config_t LCD_config = {
   .powerSupply = kSLCD_InternalVll3UseChargePump,
   .voltageTrim = kSLCD_RegulatedVolatgeTrim00,
   .clkConfig = &clkConfig,
-  .dutyCycle = kSLCD_1Div1DutyCycle,
+  .dutyCycle = kSLCD_1Div4DutyCycle,
   .displayMode = kSLCD_NormalMode,
   .loadAdjust = kSLCD_LowLoadOrFastestClkSrc,
   .lowPowerBehavior = kSLCD_EnabledInWaitStop,
@@ -343,9 +343,9 @@ slcd_config_t LCD_config = {
 };
 slcd_clock_config_t clkConfig = {
   .clkSource = kSLCD_AlternateClk1,
-  .altClkDivider = kSLCD_AltClkDivFactor1,
+  .altClkDivider = kSLCD_AltClkDivFactor512,
   .fastFrameRateEnable = false,
-  .clkPrescaler = kSLCD_ClkPrescaler00
+  .clkPrescaler = kSLCD_ClkPrescaler07
 };
 
 static void LCD_init(void) {

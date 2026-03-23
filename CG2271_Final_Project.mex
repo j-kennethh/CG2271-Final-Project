@@ -451,11 +451,11 @@
                            <struct name="clkConfig_struct">
                               <setting name="clockSource" value="kSLCD_AlternateClk1"/>
                               <setting name="clockSourceFreq" value="ClocksTool_DefaultInit"/>
-                              <setting name="altClkDivider1" value="kSLCD_AltClkDivFactor1"/>
+                              <setting name="altClkDivider1" value="kSLCD_AltClkDivFactor512"/>
                               <setting name="fastFrameRateEnable" value="false"/>
-                              <setting name="clkPrescaler" value="kSLCD_ClkPrescaler00"/>
+                              <setting name="clkPrescaler" value="kSLCD_ClkPrescaler07"/>
                            </struct>
-                           <setting name="dutyCycle" value="kSLCD_1Div1DutyCycle"/>
+                           <setting name="dutyCycle" value="kSLCD_1Div4DutyCycle"/>
                            <setting name="displayMode" value="kSLCD_NormalMode"/>
                            <setting name="loadAdjust" value="kSLCD_LowLoadOrFastestClkSrc"/>
                            <setting name="lowPowerBehavior" value="kSLCD_EnabledInWaitStop"/>
