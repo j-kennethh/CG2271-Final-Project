@@ -25,6 +25,7 @@
 #include "task.h"
 #include "queue.h"
 #include "semphr.h"
+#include "fsl_slcd.h"
 
 // ==================== CONFIGURATION ====================
 #define BUTTON_PIN      4   // PTA4 (SW3)
@@ -260,7 +261,7 @@ static void buttonTask(void *pvParameters) {
     }
 }
 
-// ==================== TASK 2: UART Receive (Get scores from ESP32) ====================
+// ==================== TASK 2: UART Receive (Get scores & Chime) ====================
 // Priority: 2 (Medium)
 static void uartReceiveTask(void *pvParameters) {
     UARTMessage_t msg;
@@ -271,7 +272,6 @@ static void uartReceiveTask(void *pvParameters) {
         if (xQueueReceive(uartQueue, &msg, portMAX_DELAY) == pdTRUE) {
             PRINTF("Received from ESP32: %s\r\n", msg.data);
 
-            // Parse format: "T:4,S:3,L:5,O:Good"
             int tScore = 3, sScore = 3, lScore = 3;
             char overall[16] = "Unknown";
 
@@ -294,7 +294,6 @@ static void uartReceiveTask(void *pvParameters) {
                                     ptr++;
                                     if (strncmp(ptr, "O:", 2) == 0) {
                                         strncpy(overall, ptr + 2, 15);
-                                        // Remove trailing newline if present
                                         char *nl = strchr(overall, '\n');
                                         if (nl) *nl = '\0';
                                     }
@@ -314,13 +313,24 @@ static void uartReceiveTask(void *pvParameters) {
                 xSemaphoreGive(scoreMutex);
             }
 
-            PRINTF("Parsed: T=%d, S=%d, L=%d, O=%s\r\n",
-                   tScore, sScore, lScore, overall);
+            PRINTF("Parsed: T=%d, S=%d, L=%d, O=%s\r\n", tScore, sScore, lScore, overall);
+
+            // ==========================================
+            // NEW: The "Processing Complete" Chime!
+            // Emits a quick double-beep ONLY when new data arrives
+            // ==========================================
+            setBuzzer(1);
+            vTaskDelay(pdMS_TO_TICKS(100));
+            setBuzzer(0);
+            vTaskDelay(pdMS_TO_TICKS(100));
+            setBuzzer(1);
+            vTaskDelay(pdMS_TO_TICKS(150));
+            setBuzzer(0);
         }
     }
 }
 
-// ==================== TASK 3: LED Control (Based on scores) ====================
+// ==================== TASK 3: LED Control (Color Hold Only) ====================
 // Priority: 3 (Highest - needs quick response)
 static void ledControlTask(void *pvParameters) {
     EnvironmentScores_t localScores;
@@ -328,68 +338,103 @@ static void ledControlTask(void *pvParameters) {
     PRINTF("LED Control Task Started (Priority 3 - Highest)\r\n");
 
     while (1) {
-        // Safely copy scores with mutex
         if (xSemaphoreTake(scoreMutex, portMAX_DELAY) == pdTRUE) {
             localScores = currentScores;
             xSemaphoreGive(scoreMutex);
         }
 
-        // Map overall rating to LED color
+        // NEW: Only controls the static LED color. No more infinite buzzing!
         if (strcmp(localScores.overall, "Good") == 0) {
             setLEDColor(0, 1, 0);  // Green
-            setBuzzer(0);           // Buzzer off
         } else if (strcmp(localScores.overall, "Poor") == 0) {
             setLEDColor(1, 1, 0);  // Yellow
-            setBuzzer(1);           // Buzzer short beep pattern
-            vTaskDelay(pdMS_TO_TICKS(100));
-            setBuzzer(0);
         } else if (strcmp(localScores.overall, "Bad") == 0) {
             setLEDColor(1, 0, 0);  // Red
-            // Buzzer alarm pattern
-            for (int i = 0; i < 3; i++) {
-                setBuzzer(1);
-                vTaskDelay(pdMS_TO_TICKS(100));
-                setBuzzer(0);
-                vTaskDelay(pdMS_TO_TICKS(100));
-            }
         } else {
             setLEDColor(0, 0, 1);  // Blue (waiting/unknown)
-            setBuzzer(0);
         }
 
         vTaskDelay(pdMS_TO_TICKS(100));  // Update every 100ms
     }
 }
 
-// ==================== TASK 4: Display Task (Optional - for I2C display) ====================
+// Helper function to map numbers/letters to the 7-segment display
+void showScoreOnScreen(char sensorType, int score) {
+    // 1. Clear the entire screen first to prevent ghosting
+    for (int i = 0; i < 64; i++) {
+        SLCD_SetFrontPlaneSegments(LCD, i, 0x00);
+    }
+
+    // 2. Define the 7-segment bitmasks
+    uint8_t mask_t = 0x78; // 't'
+    uint8_t mask_S = 0x6D; // 'S'
+    uint8_t mask_L = 0x38; // 'L'
+
+    uint8_t mask_score = 0x00;
+    // Map the 1-5 score to the correct segments
+    switch(score) {
+        case 1: mask_score = 0x06; break;
+        case 2: mask_score = 0x5B; break;
+        case 3: mask_score = 0x4F; break;
+        case 4: mask_score = 0x66; break;
+        case 5: mask_score = 0x6D; break;
+        default: mask_score = 0x40; break; // '-' for unknown
+    }
+
+    // 3. Write to the screen!
+    // NOTE: These pin numbers (37, 17, etc.) are the standard NXP FRDM-MCXC444 SLCD pins.
+    // If your screen is jumbled, check your MCUXpresso Config Tools > Pins for the exact SLCD_Pxx numbers.
+
+    // Write the Letter to Digit 1 (Far Left)
+    if (sensorType == 't') {
+        SLCD_SetFrontPlaneSegments(LCD, 37, (mask_t & 0x0F));
+        SLCD_SetFrontPlaneSegments(LCD, 17, (mask_t >> 4));
+    } else if (sensorType == 'S') {
+        SLCD_SetFrontPlaneSegments(LCD, 37, (mask_S & 0x0F));
+        SLCD_SetFrontPlaneSegments(LCD, 17, (mask_S >> 4));
+    } else if (sensorType == 'L') {
+        SLCD_SetFrontPlaneSegments(LCD, 37, (mask_L & 0x0F));
+        SLCD_SetFrontPlaneSegments(LCD, 17, (mask_L >> 4));
+    }
+
+    // Write the Score to Digit 4 (Far Right)
+    SLCD_SetFrontPlaneSegments(LCD, 10, (mask_score & 0x0F));
+    SLCD_SetFrontPlaneSegments(LCD, 11, (mask_score >> 4));
+}
+
+// ==================== TASK 4: Display Task (7-Segment Cycler) ====================
 // Priority: 2 (Same as UART)
 static void displayTask(void *pvParameters) {
     EnvironmentScores_t localScores;
-    char displayLine[32];
+    int displayState = 0; // 0 = Temp, 1 = Sound, 2 = Light
 
     PRINTF("Display Task Started (Priority 2)\r\n");
 
     while (1) {
-        // Safely copy scores
         if (xSemaphoreTake(scoreMutex, portMAX_DELAY) == pdTRUE) {
             localScores = currentScores;
             xSemaphoreGive(scoreMutex);
         }
 
-        // Here you would update your I2C display
-        // Example: display.printf("T:%d S:%d L:%d\n%s",
-        //          localScores.temperatureScore,
-        //          localScores.soundScore,
-        //          localScores.lightScore,
-        //          localScores.overall);
+        // Cycle through the scores to fit on the display
+        if (displayState == 0) {
+            PRINTF("Screen Output: t  %d\r\n", localScores.temperatureScore);
+            showScoreOnScreen('t', localScores.temperatureScore);
 
-        PRINTF("Display would show: T:%d S:%d L:%d %s\r\n",
-               localScores.temperatureScore,
-               localScores.soundScore,
-               localScores.lightScore,
-               localScores.overall);
+        } else if (displayState == 1) {
+            PRINTF("Screen Output: S  %d\r\n", localScores.soundScore);
+            showScoreOnScreen('S', localScores.soundScore);
 
-        vTaskDelay(pdMS_TO_TICKS(500));  // Update display every 500ms
+        } else if (displayState == 2) {
+            PRINTF("Screen Output: L  %d\r\n", localScores.lightScore);
+            showScoreOnScreen('L', localScores.lightScore);
+        }
+
+        // Increment state to cycle to the next sensor
+        displayState = (displayState + 1) % 3;
+
+        // Wait 1.5 seconds before showing the next score
+        vTaskDelay(pdMS_TO_TICKS(1500));
     }
 }
 
@@ -398,6 +443,8 @@ int main(void) {
     BOARD_InitBootPins();
     BOARD_InitBootClocks();
     BOARD_InitBootPeripherals();
+    // Wake up the 7-segment display
+    SLCD_StartDisplay(LCD);
     BOARD_InitDebugConsole();
 
     PRINTF("\r\n====================================\r\n");

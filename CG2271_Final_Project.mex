@@ -1,0 +1,843 @@
+<?xml version="1.0" encoding= "UTF-8" ?>
+<configuration name="MCXC444" xsi:schemaLocation="http://mcuxpresso.nxp.com/XSD/mex_configuration_18 http://mcuxpresso.nxp.com/XSD/mex_configuration_18.xsd" uuid="8a12ab8b-4650-4319-93fc-3e62b3f4ff6e" version="18" xmlns="http://mcuxpresso.nxp.com/XSD/mex_configuration_18" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <common>
+      <processor>MCXC444</processor>
+      <package>MCXC444VLH</package>
+      <board>FRDM-MCXC444</board>
+      <mcu_data>ksdk2_0</mcu_data>
+      <cores selected="core0">
+         <core name="Cortex-M0P" id="core0" description="M0P core"/>
+      </cores>
+      <description>Configuration imported from CG2271_Final_Project</description>
+   </common>
+   <preferences>
+      <validate_boot_init_only>true</validate_boot_init_only>
+      <generate_code_modified_registers_only>false</generate_code_modified_registers_only>
+      <update_include_paths>true</update_include_paths>
+      <enable_parallel_routing>true</enable_parallel_routing>
+      <generate_registers_defines>false</generate_registers_defines>
+   </preferences>
+   <tools>
+      <pins name="Pins" version="17.0" enabled="true" update_project_code="true">
+         <generated_project_files>
+            <file path="board/pin_mux.c" update_enabled="true"/>
+            <file path="board/pin_mux.h" update_enabled="true"/>
+         </generated_project_files>
+         <pins_profile>
+            <processor_version>25.06.10</processor_version>
+            <pin_labels>
+               <pin_label pin_num="1" pin_signal="LCD_P48/PTE0/CLKOUT32K/SPI1_MISO/LPUART1_TX/RTC_CLKOUT/CMP0_OUT/I2C1_SDA" label="PTE0/J2[18]/J4[9]/J5[4]"/>
+               <pin_label pin_num="2" pin_signal="LCD_P49/PTE1/SPI1_MOSI/LPUART1_RX/SPI1_MISO/I2C1_SCL" label="PTE1/J2[20]/J5[3]"/>
+               <pin_label pin_num="3" pin_signal="VDD17" label="P3V3_MCU"/>
+               <pin_label pin_num="4" pin_signal="VSS18" label="GND"/>
+               <pin_label pin_num="5" pin_signal="USB0_DP" label="USB0_DP"/>
+               <pin_label pin_num="6" pin_signal="USB0_DM" label="USB0_DM"/>
+               <pin_label pin_num="7" pin_signal="VOUT33" label="TP4"/>
+               <pin_label pin_num="8" pin_signal="VREGIN" label="VREGIN"/>
+               <pin_label pin_num="9" pin_signal="LCD_P59/ADC0_DP0/ADC0_SE0/PTE20/TPM1_CH0/LPUART0_TX/FXIO0_D4" label="PTE20/J4[1]"/>
+               <pin_label pin_num="10" pin_signal="LCD_P60/ADC0_DM0/ADC0_SE4a/PTE21/TPM1_CH1/LPUART0_RX/FXIO0_D5" label="PTE21/J4[3]"/>
+               <pin_label pin_num="11" pin_signal="ADC0_DP3/ADC0_SE3/PTE22/TPM2_CH0/UART2_TX/FXIO0_D6" label="PTE22/J4[5]"/>
+               <pin_label pin_num="12" pin_signal="ADC0_DM3/ADC0_SE7a/PTE23/TPM2_CH1/UART2_RX/FXIO0_D7" label="PTE23/J4[7]"/>
+               <pin_label pin_num="13" pin_signal="VDDA" label="P3V3_MCU"/>
+               <pin_label pin_num="14" pin_signal="VREFH" label="VREFH/JP6[2]"/>
+               <pin_label pin_num="15" pin_signal="VREFL" label="VREFL/GND"/>
+               <pin_label pin_num="16" pin_signal="VSSA" label="GND"/>
+               <pin_label pin_num="17" pin_signal="CMP0_IN5/ADC0_SE4b/PTE29/TPM0_CH2/TPM_CLKIN0" label="PTE29/J1[14]/J7[4]" identifier="LED_BLUE"/>
+               <pin_label pin_num="18" pin_signal="DAC0_OUT/ADC0_SE23/CMP0_IN4/PTE30/TPM0_CH3/TPM_CLKIN1/LPUART1_TX/LPTMR0_ALT1" label="PTE30/J1[16]/J4[11]/J6[2]"/>
+               <pin_label pin_num="19" pin_signal="PTE31/TPM0_CH4" label="PTE31" identifier="LED_RED"/>
+               <pin_label pin_num="20" pin_signal="PTE24/TPM0_CH0/I2C0_SCL" label="PTE24"/>
+               <pin_label pin_num="21" pin_signal="PTE25/TPM0_CH1/I2C0_SDA" label="PTE25"/>
+               <pin_label pin_num="22" pin_signal="PTA0/TPM0_CH5/SWD_CLK" label="PTA0/J10[4]/JP5[1]" identifier="DEBUG_SWD_SWDCLK"/>
+               <pin_label pin_num="23" pin_signal="PTA1/LPUART0_RX/TPM2_CH0" label="PTA1/J1[2]" identifier="DEBUG_UART_RX"/>
+               <pin_label pin_num="24" pin_signal="PTA2/LPUART0_TX/TPM2_CH1" label="PTA2/J1[4]" identifier="DEBUG_UART_TX"/>
+               <pin_label pin_num="25" pin_signal="PTA3/I2C1_SCL/TPM0_CH0/SWD_DIO" label="PTA3/J10[2]" identifier="DEBUG_SWD_SWDIO"/>
+               <pin_label pin_num="26" pin_signal="PTA4/I2C1_SDA/TPM0_CH1/NMI_b" label="PTA4/J1[10]" identifier="SW3"/>
+               <pin_label pin_num="27" pin_signal="PTA5/USB_CLKIN/TPM0_CH2/I2S0_TX_BCLK" label="PTA5/J1[12]/J7[2]"/>
+               <pin_label pin_num="28" pin_signal="PTA12/TPM1_CH0/I2S0_TXD0" label="PTA12/J1[8]/J5[1]"/>
+               <pin_label pin_num="29" pin_signal="PTA13/TPM1_CH1/I2S0_TX_FS" label="PTA13/J2[2]"/>
+               <pin_label pin_num="30" pin_signal="VDD96" label="P3V3_MCU"/>
+               <pin_label pin_num="31" pin_signal="VSS97" label="GND"/>
+               <pin_label pin_num="32" pin_signal="EXTAL0/PTA18/LPUART1_RX/TPM_CLKIN0" label="PTA18/EXTAL_32KHZ/Y1[1]"/>
+               <pin_label pin_num="33" pin_signal="XTAL0/PTA19/LPUART1_TX/TPM_CLKIN1/LPTMR0_ALT1" label="PTA19/XTAL_32KHZ/Y1[2]"/>
+               <pin_label pin_num="34" pin_signal="PTA20/RESET_b" label="PTA20/J10[10]/SW1[2]/SW1[4]/SW1[6]" identifier="SW1"/>
+               <pin_label pin_num="35" pin_signal="LCD_P0/ADC0_SE8/PTB0/LLWU_P5/I2C0_SCL/TPM1_CH0" label="PTB0/J4[2]/J6[1]"/>
+               <pin_label pin_num="36" pin_signal="LCD_P1/ADC0_SE9/PTB1/I2C0_SDA/TPM1_CH1" label="PTB1/J4[4]"/>
+               <pin_label pin_num="37" pin_signal="LCD_P2/ADC0_SE12/PTB2/I2C0_SCL/TPM2_CH0" label="PTB2/J4[6]"/>
+               <pin_label pin_num="38" pin_signal="LCD_P3/ADC0_SE13/PTB3/I2C0_SDA/TPM2_CH1" label="PTB3/J4[8]"/>
+               <pin_label pin_num="39" pin_signal="LCD_P12/PTB16/SPI1_MOSI/LPUART0_RX/TPM_CLKIN0/SPI1_MISO" label="PTB16/J2[19]"/>
+               <pin_label pin_num="40" pin_signal="LCD_P13/PTB17/SPI1_MISO/LPUART0_TX/TPM_CLKIN1/SPI1_MOSI" label="PTB17/J2[17]"/>
+               <pin_label pin_num="41" pin_signal="LCD_P14/PTB18/TPM2_CH0/I2S0_TX_BCLK" label="PTB18/J1[1]"/>
+               <pin_label pin_num="42" pin_signal="LCD_P15/PTB19/TPM2_CH1/I2S0_TX_FS" label="PTB19/J1[3]"/>
+               <pin_label pin_num="43" pin_signal="LCD_P20/ADC0_SE14/PTC0/EXTRG_IN/USB_SOF_OUT/CMP0_OUT/I2S0_TXD0" label="PTC0/J1[5]"/>
+               <pin_label pin_num="44" pin_signal="LCD_P21/ADC0_SE15/PTC1/LLWU_P6/RTC_CLKIN/I2C1_SCL/TPM0_CH0/I2S0_TXD0" label="PTC1/J4[12]/J5[5]/J7[6]"/>
+               <pin_label pin_num="45" pin_signal="LCD_P22/ADC0_SE11/PTC2/I2C1_SDA/TPM0_CH1/I2S0_TX_FS" label="PTC2/J4[10]/J5[6]/J7[8]"/>
+               <pin_label pin_num="46" pin_signal="LCD_P23/PTC3/LLWU_P7/SPI1_SCK/LPUART1_RX/TPM0_CH2/CLKOUT/I2S0_TX_BCLK" label="PTC3/SW2[2]/SW2[4]/SW2[6]" identifier="SW2"/>
+               <pin_label pin_num="47" pin_signal="VSS138" label="GND"/>
+               <pin_label pin_num="48" pin_signal="VLL3" label="JP7[2]"/>
+               <pin_label pin_num="49" pin_signal="VLL2/LCD_P4/PTC20" label="PTC20/TP2"/>
+               <pin_label pin_num="50" pin_signal="VLL1/LCD_P5/PTC21" label="PTC21/TP1"/>
+               <pin_label pin_num="51" pin_signal="VCAP2/LCD_P6/PTC22" label="PTC22"/>
+               <pin_label pin_num="52" pin_signal="VCAP1/LCD_P39/PTC23" label="PTC23"/>
+               <pin_label pin_num="53" pin_signal="LCD_P24/PTC4/LLWU_P8/SPI0_SS/LPUART1_TX/TPM0_CH3/I2S0_MCLK" label="PTC4/J1[7]"/>
+               <pin_label pin_num="54" pin_signal="LCD_P25/PTC5/LLWU_P9/SPI0_SCK/LPTMR0_ALT2/I2S0_RXD0/CMP0_OUT" label="PTC5/J1[15]"/>
+               <pin_label pin_num="55" pin_signal="LCD_P26/CMP0_IN0/PTC6/LLWU_P10/SPI0_MOSI/EXTRG_IN/I2S0_RX_BCLK/SPI0_MISO/I2S0_MCLK" label="PTC6/J1[9]"/>
+               <pin_label pin_num="56" pin_signal="LCD_P27/CMP0_IN1/PTC7/SPI0_MISO/USB_SOF_OUT/I2S0_RX_FS/SPI0_MOSI" label="PTC7/J1[11]"/>
+               <pin_label pin_num="57" pin_signal="LCD_P40/PTD0/SPI0_SS/TPM0_CH0/FXIO0_D0" label="PTD0/DS1[9]"/>
+               <pin_label pin_num="58" pin_signal="LCD_P41/ADC0_SE5b/PTD1/SPI0_SCK/TPM0_CH1/FXIO0_D1" label="PTD1"/>
+               <pin_label pin_num="59" pin_signal="LCD_P42/PTD2/SPI0_MOSI/UART2_RX/TPM0_CH2/SPI0_MISO/FXIO0_D2" label="PTD2/J2[4]"/>
+               <pin_label pin_num="60" pin_signal="LCD_P43/PTD3/SPI0_MISO/UART2_TX/TPM0_CH3/SPI0_MOSI/FXIO0_D3" label="PTD3/J1[6]/J5[2]"/>
+               <pin_label pin_num="61" pin_signal="LCD_P44/PTD4/LLWU_P14/SPI1_SS/UART2_RX/TPM0_CH4/FXIO0_D4" label="PTD4/J2[6]/J7[1]/J6[3]"/>
+               <pin_label pin_num="62" pin_signal="LCD_P45/ADC0_SE6b/PTD5/SPI1_SCK/UART2_TX/TPM0_CH5/FXIO0_D5" label="PTD5/J2[12]/J7[7]/J6[4]" identifier="LED_GREEN"/>
+               <pin_label pin_num="63" pin_signal="LCD_P46/ADC0_SE7b/PTD6/LLWU_P15/SPI1_MOSI/LPUART0_RX/SPI1_MISO/FXIO0_D6" label="PTD6/J2[8]/J7[3]/J6[6]"/>
+               <pin_label pin_num="64" pin_signal="LCD_P47/PTD7/SPI1_MISO/LPUART0_TX/SPI1_MOSI/FXIO0_D7" label="PTD7/J2[10]/J7[5]/J6[5]"/>
+            </pin_labels>
+            <expansion_headers>
+               <expansion_header id="micro_bus" name="mikroBUS(TM)">
+                  <connectors>
+                     <connector id="C1" name="J6">
+                        <pins>
+                           <pin id="1" pin_num="35" pin_signal="LCD_P0/ADC0_SE8/PTB0/LLWU_P5/I2C0_SCL/TPM1_CH0"/>
+                           <pin id="2" pin_num="18" pin_signal="DAC0_OUT/ADC0_SE23/CMP0_IN4/PTE30/TPM0_CH3/TPM_CLKIN1/LPUART1_TX/LPTMR0_ALT1"/>
+                           <pin id="3" pin_num="61" pin_signal="LCD_P44/PTD4/LLWU_P14/SPI1_SS/UART2_RX/TPM0_CH4/FXIO0_D4"/>
+                           <pin id="4" pin_num="62" pin_signal="LCD_P45/ADC0_SE6b/PTD5/SPI1_SCK/UART2_TX/TPM0_CH5/FXIO0_D5"/>
+                           <pin id="5" pin_num="64" pin_signal="LCD_P47/PTD7/SPI1_MISO/LPUART0_TX/SPI1_MOSI/FXIO0_D7"/>
+                           <pin id="6" pin_num="63" pin_signal="LCD_P46/ADC0_SE7b/PTD6/LLWU_P15/SPI1_MOSI/LPUART0_RX/SPI1_MISO/FXIO0_D6"/>
+                        </pins>
+                     </connector>
+                     <connector id="C2" name="J5">
+                        <pins>
+                           <pin id="1" pin_num="28" pin_signal="PTA12/TPM1_CH0/I2S0_TXD0"/>
+                           <pin id="2" pin_num="60" pin_signal="LCD_P43/PTD3/SPI0_MISO/UART2_TX/TPM0_CH3/SPI0_MOSI/FXIO0_D3"/>
+                           <pin id="3" pin_num="2" pin_signal="LCD_P49/PTE1/SPI1_MOSI/LPUART1_RX/SPI1_MISO/I2C1_SCL"/>
+                           <pin id="4" pin_num="1" pin_signal="LCD_P48/PTE0/CLKOUT32K/SPI1_MISO/LPUART1_TX/RTC_CLKOUT/CMP0_OUT/I2C1_SDA"/>
+                           <pin id="5" pin_num="44" pin_signal="LCD_P21/ADC0_SE15/PTC1/LLWU_P6/RTC_CLKIN/I2C1_SCL/TPM0_CH0/I2S0_TXD0"/>
+                           <pin id="6" pin_num="45" pin_signal="LCD_P22/ADC0_SE11/PTC2/I2C1_SDA/TPM0_CH1/I2S0_TX_FS"/>
+                        </pins>
+                     </connector>
+                  </connectors>
+               </expansion_header>
+               <expansion_header id="frdm_arduino" name="LPCXpresso V3 (Arduino compatible)">
+                  <connectors>
+                     <connector id="C1" name="J3">
+                        <pins>
+                           <pin id="6" pin_num="34" pin_signal="PTA20/RESET_b"/>
+                        </pins>
+                     </connector>
+                     <connector id="C2" name="J2">
+                        <pins>
+                           <pin id="2" pin_num="29" pin_signal="PTA13/TPM1_CH1/I2S0_TX_FS"/>
+                           <pin id="4" pin_num="59" pin_signal="LCD_P42/PTD2/SPI0_MOSI/UART2_RX/TPM0_CH2/SPI0_MISO/FXIO0_D2"/>
+                           <pin id="6" pin_num="61" pin_signal="LCD_P44/PTD4/LLWU_P14/SPI1_SS/UART2_RX/TPM0_CH4/FXIO0_D4"/>
+                           <pin id="8" pin_num="63" pin_signal="LCD_P46/ADC0_SE7b/PTD6/LLWU_P15/SPI1_MOSI/LPUART0_RX/SPI1_MISO/FXIO0_D6"/>
+                           <pin id="10" pin_num="64" pin_signal="LCD_P47/PTD7/SPI1_MISO/LPUART0_TX/SPI1_MOSI/FXIO0_D7"/>
+                           <pin id="12" pin_num="62" pin_signal="LCD_P45/ADC0_SE6b/PTD5/SPI1_SCK/UART2_TX/TPM0_CH5/FXIO0_D5"/>
+                           <pin id="17" pin_num="40" pin_signal="LCD_P13/PTB17/SPI1_MISO/LPUART0_TX/TPM_CLKIN1/SPI1_MOSI"/>
+                           <pin id="18" pin_num="1" pin_signal="LCD_P48/PTE0/CLKOUT32K/SPI1_MISO/LPUART1_TX/RTC_CLKOUT/CMP0_OUT/I2C1_SDA"/>
+                           <pin id="19" pin_num="39" pin_signal="LCD_P12/PTB16/SPI1_MOSI/LPUART0_RX/TPM_CLKIN0/SPI1_MISO"/>
+                           <pin id="20" pin_num="2" pin_signal="LCD_P49/PTE1/SPI1_MOSI/LPUART1_RX/SPI1_MISO/I2C1_SCL"/>
+                        </pins>
+                     </connector>
+                     <connector id="C3" name="J1">
+                        <pins>
+                           <pin id="1" pin_num="41" pin_signal="LCD_P14/PTB18/TPM2_CH0/I2S0_TX_BCLK"/>
+                           <pin id="2" pin_num="23" pin_signal="PTA1/LPUART0_RX/TPM2_CH0"/>
+                           <pin id="3" pin_num="42" pin_signal="LCD_P15/PTB19/TPM2_CH1/I2S0_TX_FS"/>
+                           <pin id="4" pin_num="24" pin_signal="PTA2/LPUART0_TX/TPM2_CH1"/>
+                           <pin id="5" pin_num="43" pin_signal="LCD_P20/ADC0_SE14/PTC0/EXTRG_IN/USB_SOF_OUT/CMP0_OUT/I2S0_TXD0"/>
+                           <pin id="6" pin_num="60" pin_signal="LCD_P43/PTD3/SPI0_MISO/UART2_TX/TPM0_CH3/SPI0_MOSI/FXIO0_D3"/>
+                           <pin id="7" pin_num="53" pin_signal="LCD_P24/PTC4/LLWU_P8/SPI0_SS/LPUART1_TX/TPM0_CH3/I2S0_MCLK"/>
+                           <pin id="8" pin_num="28" pin_signal="PTA12/TPM1_CH0/I2S0_TXD0"/>
+                           <pin id="9" pin_num="55" pin_signal="LCD_P26/CMP0_IN0/PTC6/LLWU_P10/SPI0_MOSI/EXTRG_IN/I2S0_RX_BCLK/SPI0_MISO/I2S0_MCLK"/>
+                           <pin id="10" pin_num="26" pin_signal="PTA4/I2C1_SDA/TPM0_CH1/NMI_b"/>
+                           <pin id="11" pin_num="56" pin_signal="LCD_P27/CMP0_IN1/PTC7/SPI0_MISO/USB_SOF_OUT/I2S0_RX_FS/SPI0_MOSI"/>
+                           <pin id="12" pin_num="27" pin_signal="PTA5/USB_CLKIN/TPM0_CH2/I2S0_TX_BCLK"/>
+                           <pin id="14" pin_num="17" pin_signal="CMP0_IN5/ADC0_SE4b/PTE29/TPM0_CH2/TPM_CLKIN0"/>
+                           <pin id="15" pin_num="54" pin_signal="LCD_P25/PTC5/LLWU_P9/SPI0_SCK/LPTMR0_ALT2/I2S0_RXD0/CMP0_OUT"/>
+                           <pin id="16" pin_num="18" pin_signal="DAC0_OUT/ADC0_SE23/CMP0_IN4/PTE30/TPM0_CH3/TPM_CLKIN1/LPUART1_TX/LPTMR0_ALT1"/>
+                        </pins>
+                     </connector>
+                     <connector id="C4" name="J4">
+                        <pins>
+                           <pin id="1" pin_num="9" pin_signal="LCD_P59/ADC0_DP0/ADC0_SE0/PTE20/TPM1_CH0/LPUART0_TX/FXIO0_D4"/>
+                           <pin id="2" pin_num="35" pin_signal="LCD_P0/ADC0_SE8/PTB0/LLWU_P5/I2C0_SCL/TPM1_CH0"/>
+                           <pin id="3" pin_num="10" pin_signal="LCD_P60/ADC0_DM0/ADC0_SE4a/PTE21/TPM1_CH1/LPUART0_RX/FXIO0_D5"/>
+                           <pin id="4" pin_num="36" pin_signal="LCD_P1/ADC0_SE9/PTB1/I2C0_SDA/TPM1_CH1"/>
+                           <pin id="5" pin_num="11" pin_signal="ADC0_DP3/ADC0_SE3/PTE22/TPM2_CH0/UART2_TX/FXIO0_D6"/>
+                           <pin id="6" pin_num="37" pin_signal="LCD_P2/ADC0_SE12/PTB2/I2C0_SCL/TPM2_CH0"/>
+                           <pin id="7" pin_num="12" pin_signal="ADC0_DM3/ADC0_SE7a/PTE23/TPM2_CH1/UART2_RX/FXIO0_D7"/>
+                           <pin id="8" pin_num="38" pin_signal="LCD_P3/ADC0_SE13/PTB3/I2C0_SDA/TPM2_CH1"/>
+                           <pin id="9" pin_num="1" pin_signal="LCD_P48/PTE0/CLKOUT32K/SPI1_MISO/LPUART1_TX/RTC_CLKOUT/CMP0_OUT/I2C1_SDA"/>
+                           <pin id="10" pin_num="45" pin_signal="LCD_P22/ADC0_SE11/PTC2/I2C1_SDA/TPM0_CH1/I2S0_TX_FS"/>
+                           <pin id="11" pin_num="18" pin_signal="DAC0_OUT/ADC0_SE23/CMP0_IN4/PTE30/TPM0_CH3/TPM_CLKIN1/LPUART1_TX/LPTMR0_ALT1"/>
+                           <pin id="12" pin_num="44" pin_signal="LCD_P21/ADC0_SE15/PTC1/LLWU_P6/RTC_CLKIN/I2C1_SCL/TPM0_CH0/I2S0_TXD0"/>
+                        </pins>
+                     </connector>
+                  </connectors>
+               </expansion_header>
+            </expansion_headers>
+         </pins_profile>
+         <functions_list>
+            <function name="BOARD_InitDEBUG_UARTPins">
+               <description>Configures pin routing and optionally pin electrical features.</description>
+               <options>
+                  <callFromInitBoot>true</callFromInitBoot>
+                  <coreID>core0</coreID>
+                  <enableClock>true</enableClock>
+               </options>
+               <dependencies>
+                  <dependency resourceType="Peripheral" resourceId="LPUART0" description="Peripheral LPUART0 is not initialized" problem_level="1" source="Pins:BOARD_InitDEBUG_UARTPins">
+                     <feature name="initialized" evaluation="equal">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="SWComponent" resourceId="platform.drivers.common" description="Pins initialization requires the COMMON Driver in the project." problem_level="2" source="Pins:BOARD_InitDEBUG_UARTPins">
+                     <feature name="enabled" evaluation="equal" configuration="core0">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="SWComponent" resourceId="platform.drivers.port" description="Pins initialization requires the PORT Driver in the project." problem_level="2" source="Pins:BOARD_InitDEBUG_UARTPins">
+                     <feature name="enabled" evaluation="equal" configuration="core0">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+               </dependencies>
+               <pins>
+                  <pin peripheral="LPUART0" signal="RX" pin_num="23" pin_signal="PTA1/LPUART0_RX/TPM2_CH0"/>
+                  <pin peripheral="LPUART0" signal="TX" pin_num="24" pin_signal="PTA2/LPUART0_TX/TPM2_CH1"/>
+               </pins>
+            </function>
+            <function name="BOARD_InitSWD_DEBUGPins">
+               <description>Configures pin routing and optionally pin electrical features.</description>
+               <options>
+                  <callFromInitBoot>false</callFromInitBoot>
+                  <coreID>core0</coreID>
+                  <enableClock>true</enableClock>
+               </options>
+               <dependencies>
+                  <dependency resourceType="Peripheral" resourceId="SWD" description="Peripheral SWD is not initialized" problem_level="1" source="Pins:BOARD_InitSWD_DEBUGPins">
+                     <feature name="initialized" evaluation="equal">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="SWComponent" resourceId="platform.drivers.common" description="Pins initialization requires the COMMON Driver in the project." problem_level="2" source="Pins:BOARD_InitSWD_DEBUGPins">
+                     <feature name="enabled" evaluation="equal" configuration="core0">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="SWComponent" resourceId="platform.drivers.port" description="Pins initialization requires the PORT Driver in the project." problem_level="2" source="Pins:BOARD_InitSWD_DEBUGPins">
+                     <feature name="enabled" evaluation="equal" configuration="core0">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+               </dependencies>
+               <pins>
+                  <pin peripheral="SWD" signal="CLK" pin_num="22" pin_signal="PTA0/TPM0_CH5/SWD_CLK"/>
+                  <pin peripheral="SWD" signal="DIO" pin_num="25" pin_signal="PTA3/I2C1_SCL/TPM0_CH0/SWD_DIO"/>
+               </pins>
+            </function>
+            <function name="BOARD_InitLEDsPins">
+               <description>Configures pin routing and optionally pin electrical features.</description>
+               <options>
+                  <callFromInitBoot>false</callFromInitBoot>
+                  <coreID>core0</coreID>
+                  <enableClock>true</enableClock>
+               </options>
+               <dependencies>
+                  <dependency resourceType="SWComponent" resourceId="platform.drivers.common" description="Pins initialization requires the COMMON Driver in the project." problem_level="2" source="Pins:BOARD_InitLEDsPins">
+                     <feature name="enabled" evaluation="equal" configuration="core0">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="SWComponent" resourceId="platform.drivers.port" description="Pins initialization requires the PORT Driver in the project." problem_level="2" source="Pins:BOARD_InitLEDsPins">
+                     <feature name="enabled" evaluation="equal" configuration="core0">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+               </dependencies>
+               <pins>
+                  <pin peripheral="GPIOE" signal="GPIO, 29" pin_num="17" pin_signal="CMP0_IN5/ADC0_SE4b/PTE29/TPM0_CH2/TPM_CLKIN0"/>
+                  <pin peripheral="GPIOE" signal="GPIO, 31" pin_num="19" pin_signal="PTE31/TPM0_CH4"/>
+                  <pin peripheral="GPIOD" signal="GPIO, 5" pin_num="62" pin_signal="LCD_P45/ADC0_SE6b/PTD5/SPI1_SCK/UART2_TX/TPM0_CH5/FXIO0_D5"/>
+               </pins>
+            </function>
+            <function name="BOARD_InitBUTTONsPins">
+               <description>Configures pin routing and optionally pin electrical features.</description>
+               <options>
+                  <callFromInitBoot>false</callFromInitBoot>
+                  <coreID>core0</coreID>
+                  <enableClock>true</enableClock>
+               </options>
+               <dependencies>
+                  <dependency resourceType="Peripheral" resourceId="RCM" description="Peripheral RCM is not initialized" problem_level="1" source="Pins:BOARD_InitBUTTONsPins">
+                     <feature name="initialized" evaluation="equal">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="SWComponent" resourceId="platform.drivers.common" description="Pins initialization requires the COMMON Driver in the project." problem_level="2" source="Pins:BOARD_InitBUTTONsPins">
+                     <feature name="enabled" evaluation="equal" configuration="core0">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="SWComponent" resourceId="platform.drivers.port" description="Pins initialization requires the PORT Driver in the project." problem_level="2" source="Pins:BOARD_InitBUTTONsPins">
+                     <feature name="enabled" evaluation="equal" configuration="core0">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+               </dependencies>
+               <pins>
+                  <pin peripheral="GPIOA" signal="GPIO, 4" pin_num="26" pin_signal="PTA4/I2C1_SDA/TPM0_CH1/NMI_b"/>
+                  <pin peripheral="RCM" signal="RESET" pin_num="34" pin_signal="PTA20/RESET_b"/>
+                  <pin peripheral="GPIOC" signal="GPIO, 3" pin_num="46" pin_signal="LCD_P23/PTC3/LLWU_P7/SPI1_SCK/LPUART1_RX/TPM0_CH2/CLKOUT/I2S0_TX_BCLK"/>
+               </pins>
+            </function>
+         </functions_list>
+      </pins>
+      <clocks name="Clocks" version="17.0" enabled="true" update_project_code="true">
+         <generated_project_files>
+            <file path="board/clock_config.c" update_enabled="true"/>
+            <file path="board/clock_config.h" update_enabled="true"/>
+         </generated_project_files>
+         <clocks_profile>
+            <processor_version>25.06.10</processor_version>
+         </clocks_profile>
+         <clock_configurations>
+            <clock_configuration name="BOARD_BootClockRUN" id_prefix="" prefix_user_defined="false">
+               <description></description>
+               <options/>
+               <dependencies>
+                  <dependency resourceType="SWComponent" resourceId="platform.drivers.common" description="Clocks initialization requires the COMMON Driver in the project." problem_level="2" source="Clocks:BOARD_BootClockRUN">
+                     <feature name="enabled" evaluation="equal" configuration="core0">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+               </dependencies>
+               <clock_sources>
+                  <clock_source id="MCG.HIRC.outFreq" value="48 MHz" locked="false" enabled="false"/>
+                  <clock_source id="MCG.LIRC.outFreq" value="2 MHz" locked="false" enabled="false"/>
+               </clock_sources>
+               <clock_outputs>
+                  <clock_output id="Bus_clock.outFreq" value="24 MHz" locked="false" accuracy=""/>
+                  <clock_output id="Core_clock.outFreq" value="48 MHz" locked="false" accuracy=""/>
+                  <clock_output id="Flash_clock.outFreq" value="24 MHz" locked="false" accuracy=""/>
+                  <clock_output id="LPO_clock.outFreq" value="1 kHz" locked="false" accuracy=""/>
+                  <clock_output id="LPUART0CLK.outFreq" value="48 MHz" locked="false" accuracy=""/>
+                  <clock_output id="MCGIRCLK.outFreq" value="2 MHz" locked="false" accuracy=""/>
+                  <clock_output id="MCGPCLK.outFreq" value="48 MHz" locked="false" accuracy=""/>
+                  <clock_output id="Platform_clock.outFreq" value="48 MHz" locked="false" accuracy=""/>
+                  <clock_output id="System_clock.outFreq" value="48 MHz" locked="false" accuracy=""/>
+               </clock_outputs>
+               <clock_settings>
+                  <setting id="MCGMode" value="HIRC" locked="false"/>
+                  <setting id="LPUART0ClkConfig" value="yes" locked="false"/>
+                  <setting id="MCG.CLKS.sel" value="MCG.HIRC" locked="false"/>
+                  <setting id="MCG_C2_OSC_MODE_CFG" value="ModeOscLowPower" locked="false"/>
+                  <setting id="MCG_C2_RANGE0_CFG" value="Very_high" locked="false"/>
+                  <setting id="MCG_MC_HIRCEN_CFG" value="Enabled" locked="false"/>
+                  <setting id="OSC0_CR_ERCLKEN_CFG" value="Enabled" locked="false"/>
+                  <setting id="OSC_CR_ERCLKEN_CFG" value="Enabled" locked="false"/>
+                  <setting id="SIM.LPUART0SRCSEL.sel" value="MCG.MCGPCLK" locked="false"/>
+               </clock_settings>
+               <called_from_default_init>true</called_from_default_init>
+            </clock_configuration>
+            <clock_configuration name="BOARD_BootClockVLPR" id_prefix="" prefix_user_defined="false">
+               <description></description>
+               <options/>
+               <dependencies>
+                  <dependency resourceType="SWComponent" resourceId="platform.drivers.common" description="Clocks initialization requires the COMMON Driver in the project." problem_level="2" source="Clocks:BOARD_BootClockVLPR">
+                     <feature name="enabled" evaluation="equal" configuration="core0">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="SWComponent" resourceId="platform.drivers.smc" description="Clocks initialization requires the SMC Driver in the project." problem_level="2" source="Clocks:BOARD_BootClockVLPR">
+                     <feature name="enabled" evaluation="equal" configuration="core0">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+               </dependencies>
+               <clock_sources>
+                  <clock_source id="MCG.LIRC.outFreq" value="2 MHz" locked="false" enabled="false"/>
+               </clock_sources>
+               <clock_outputs>
+                  <clock_output id="Bus_clock.outFreq" value="1 MHz" locked="false" accuracy=""/>
+                  <clock_output id="Core_clock.outFreq" value="2 MHz" locked="false" accuracy=""/>
+                  <clock_output id="Flash_clock.outFreq" value="1 MHz" locked="false" accuracy=""/>
+                  <clock_output id="LPO_clock.outFreq" value="1 kHz" locked="false" accuracy=""/>
+                  <clock_output id="MCGIRCLK.outFreq" value="2 MHz" locked="false" accuracy=""/>
+                  <clock_output id="Platform_clock.outFreq" value="2 MHz" locked="false" accuracy=""/>
+                  <clock_output id="System_clock.outFreq" value="2 MHz" locked="false" accuracy=""/>
+               </clock_outputs>
+               <clock_settings>
+                  <setting id="MCGMode" value="LIRC2M" locked="false"/>
+                  <setting id="powerMode" value="VLPR" locked="false"/>
+                  <setting id="MCG_C2_OSC_MODE_CFG" value="ModeOscLowPower" locked="false"/>
+               </clock_settings>
+               <called_from_default_init>false</called_from_default_init>
+            </clock_configuration>
+         </clock_configurations>
+      </clocks>
+      <dcdx name="DCDx" version="4.0" enabled="false" update_project_code="true">
+         <generated_project_files/>
+         <dcdx_profile>
+            <processor_version>N/A</processor_version>
+         </dcdx_profile>
+         <dcdx_configurations/>
+      </dcdx>
+      <periphs name="Peripherals" version="15.0" enabled="true" update_project_code="true">
+         <dependencies>
+            <dependency resourceType="SWComponent" resourceId="platform.drivers.slcd" description="SLCD Driver is not found in the toolchain/IDE project. The project will not compile!" problem_level="2" source="Peripherals">
+               <feature name="enabled" evaluation="equal">
+                  <data type="Boolean">true</data>
+               </feature>
+            </dependency>
+            <dependency resourceType="SWComponent" resourceId="platform.drivers.slcd" description="An unsupported version of the SLCD Driver in the toolchain/IDE project. Required: ${required_value}, actual: ${actual_value}. The project might not compile correctly." problem_level="1" source="Peripherals">
+               <feature name="version" evaluation="greaterOrEqual">
+                  <data type="Version" maxValue="2.1.9">2.0.1</data>
+               </feature>
+            </dependency>
+            <dependency resourceType="SWComponent" resourceId="platform.drivers.lpuart_cmsis" description="LPUART CMSIS Driver is not found in the toolchain/IDE project. The project will not compile!" problem_level="2" source="Peripherals">
+               <feature name="enabled" evaluation="equal">
+                  <data type="Boolean">true</data>
+               </feature>
+            </dependency>
+            <dependency resourceType="SWComponent" resourceId="platform.drivers.lpuart_cmsis" description="An unsupported version of the LPUART CMSIS Driver in the toolchain/IDE project. Required: ${required_value}, actual: ${actual_value}. The project might not compile correctly." problem_level="1" source="Peripherals">
+               <feature name="version" evaluation="greaterOrEqual">
+                  <data type="Version" maxValue="2.7.9">2.4.0</data>
+               </feature>
+            </dependency>
+            <dependency resourceType="Tool" resourceId="Clocks" description="The Clocks tool is required by the Peripherals tool, but it is disabled." problem_level="2" source="Peripherals">
+               <feature name="enabled" evaluation="equal">
+                  <data>true</data>
+               </feature>
+            </dependency>
+         </dependencies>
+         <generated_project_files>
+            <file path="board/peripherals.c" update_enabled="true"/>
+            <file path="board/peripherals.h" update_enabled="true"/>
+         </generated_project_files>
+         <peripherals_profile>
+            <processor_version>25.06.10</processor_version>
+         </peripherals_profile>
+         <functional_groups>
+            <functional_group name="BOARD_InitPeripherals" uuid="0fcc07ee-8768-4942-9f92-8d66fbde5778" called_from_default_init="true" id_prefix="" core="core0">
+               <description></description>
+               <options/>
+               <dependencies>
+                  <dependency resourceType="ClockOutput" resourceId="MCGIRCLK" description="MCGIRCLK is inactive." problem_level="2" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="frequency" evaluation="greaterThan">
+                        <data type="Frequency" unit="Hz">0</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="ClockOutput" resourceId="LPUART0CLK" description="LPUART0 clock is inactive." problem_level="2" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="frequency" evaluation="greaterThan">
+                        <data type="Frequency" unit="Hz">0</data>
+                     </feature>
+                  </dependency>
+               </dependencies>
+               <instances>
+                  <instance name="NVIC" uuid="a5b9f977-ac72-4004-b006-d5f4d87e79f8" type="nvic" type_id="nvic" mode="general" peripheral="NVIC" enabled="true" comment="" custom_name_enabled="false" editing_lock="false">
+                     <config_set name="nvic">
+                        <array name="interrupt_table">
+                           <struct name="0"/>
+                        </array>
+                        <array name="interrupts"/>
+                     </config_set>
+                  </instance>
+                  <instance name="LCD" uuid="df4e1f03-8b28-40f3-a3e2-0e462016bcb2" type="slcd" type_id="slcd_2.0.1" mode="general" peripheral="LCD" enabled="true" comment="" custom_name_enabled="false" editing_lock="false">
+                     <config_set name="fsl_slcd">
+                        <struct name="slcd_config">
+                           <setting name="powerSupply" value="kSLCD_InternalVll3UseChargePump"/>
+                           <setting name="voltageTrim" value="kSLCD_RegulatedVolatgeTrim00"/>
+                           <struct name="clkConfig_struct">
+                              <setting name="clockSource" value="kSLCD_AlternateClk1"/>
+                              <setting name="clockSourceFreq" value="ClocksTool_DefaultInit"/>
+                              <setting name="altClkDivider1" value="kSLCD_AltClkDivFactor1"/>
+                              <setting name="fastFrameRateEnable" value="false"/>
+                              <setting name="clkPrescaler" value="kSLCD_ClkPrescaler00"/>
+                           </struct>
+                           <setting name="dutyCycle" value="kSLCD_1Div1DutyCycle"/>
+                           <setting name="displayMode" value="kSLCD_NormalMode"/>
+                           <setting name="loadAdjust" value="kSLCD_LowLoadOrFastestClkSrc"/>
+                           <setting name="lowPowerBehavior" value="kSLCD_EnabledInWaitStop"/>
+                           <array name="all_pins">
+                              <struct name="0">
+                                 <array name="pinsFirstRow">
+                                    <struct name="0">
+                                       <setting name="bool_array_item_t" value="false"/>
+                                       <setting name="pinsOptions" value="fp"/>
+                                    </struct>
+                                    <struct name="1">
+                                       <setting name="bool_array_item_t" value="false"/>
+                                       <setting name="pinsOptions" value="fp"/>
+                                    </struct>
+                                    <struct name="2">
+                                       <setting name="bool_array_item_t" value="false"/>
+                                       <setting name="pinsOptions" value="fp"/>
+                                    </struct>
+                                    <struct name="3">
+                                       <setting name="bool_array_item_t" value="false"/>
+                                       <setting name="pinsOptions" value="fp"/>
+                                    </struct>
+                                    <struct name="4">
+                                       <setting name="bool_array_item_t" value="false"/>
+                                       <setting name="pinsOptions" value="fp"/>
+                                    </struct>
+                                    <struct name="5">
+                                       <setting name="bool_array_item_t" value="false"/>
+                                       <setting name="pinsOptions" value="fp"/>
+                                    </struct>
+                                    <struct name="6">
+                                       <setting name="bool_array_item_t" value="false"/>
+                                       <setting name="pinsOptions" value="fp"/>
+                                    </struct>
+                                    <struct name="7">
+                                       <setting name="bool_array_item_t" value="true"/>
+                                       <setting name="pinsOptions" value="fp"/>
+                                    </struct>
+                                    <struct name="8">
+                                       <setting name="bool_array_item_t" value="true"/>
+                                       <setting name="pinsOptions" value="fp"/>
+                                    </struct>
+                                    <struct name="9">
+                                       <setting name="bool_array_item_t" value="false"/>
+                                       <setting name="pinsOptions" value="fp"/>
+                                    </struct>
+                                    <struct name="10">
+                                       <setting name="bool_array_item_t" value="true"/>
+                                       <setting name="pinsOptions" value="fp"/>
+                                    </struct>
+                                    <struct name="11">
+                                       <setting name="bool_array_item_t" value="true"/>
+                                       <setting name="pinsOptions" value="fp"/>
+                                    </struct>
+                                    <struct name="12">
+                                       <setting name="bool_array_item_t" value="false"/>
+                                       <setting name="pinsOptions" value="fp"/>
+                                    </struct>
+                                    <struct name="13">
+                                       <setting name="bool_array_item_t" value="false"/>
+                                       <setting name="pinsOptions" value="fp"/>
+                                    </struct>
+                                    <struct name="14">
+                                       <setting name="bool_array_item_t" value="false"/>
+                                       <setting name="pinsOptions" value="fp"/>
+                                    </struct>
+                                    <struct name="15">
+                                       <setting name="bool_array_item_t" value="false"/>
+                                       <setting name="pinsOptions" value="fp"/>
+                                    </struct>
+                                 </array>
+                                 <array name="pinsSecondRow">
+                                    <struct name="0">
+                                       <setting name="bool_array_item_t" value="false"/>
+                                       <setting name="pinsOptions" value="fp"/>
+                                    </struct>
+                                    <struct name="1">
+                                       <setting name="bool_array_item_t" value="true"/>
+                                       <setting name="pinsOptions" value="fp"/>
+                                    </struct>
+                                    <struct name="2">
+                                       <setting name="bool_array_item_t" value="true"/>
+                                       <setting name="pinsOptions" value="bp"/>
+                                    </struct>
+                                    <struct name="3">
+                                       <setting name="bool_array_item_t" value="true"/>
+                                       <setting name="pinsOptions" value="bp"/>
+                                    </struct>
+                                    <struct name="4">
+                                       <setting name="bool_array_item_t" value="false"/>
+                                       <setting name="pinsOptions" value="fp"/>
+                                    </struct>
+                                    <struct name="5">
+                                       <setting name="bool_array_item_t" value="false"/>
+                                       <setting name="pinsOptions" value="fp"/>
+                                    </struct>
+                                    <struct name="6">
+                                       <setting name="bool_array_item_t" value="false"/>
+                                       <setting name="pinsOptions" value="fp"/>
+                                    </struct>
+                                    <struct name="7">
+                                       <setting name="bool_array_item_t" value="false"/>
+                                       <setting name="pinsOptions" value="fp"/>
+                                    </struct>
+                                    <struct name="8">
+                                       <setting name="bool_array_item_t" value="false"/>
+                                       <setting name="pinsOptions" value="fp"/>
+                                    </struct>
+                                    <struct name="9">
+                                       <setting name="bool_array_item_t" value="false"/>
+                                       <setting name="pinsOptions" value="fp"/>
+                                    </struct>
+                                    <struct name="10">
+                                       <setting name="bool_array_item_t" value="false"/>
+                                       <setting name="pinsOptions" value="fp"/>
+                                    </struct>
+                                    <struct name="11">
+                                       <setting name="bool_array_item_t" value="false"/>
+                                       <setting name="pinsOptions" value="fp"/>
+                                    </struct>
+                                    <struct name="12">
+                                       <setting name="bool_array_item_t" value="false"/>
+                                       <setting name="pinsOptions" value="fp"/>
+                                    </struct>
+                                    <struct name="13">
+                                       <setting name="bool_array_item_t" value="false"/>
+                                       <setting name="pinsOptions" value="fp"/>
+                                    </struct>
+                                    <struct name="14">
+                                       <setting name="bool_array_item_t" value="false"/>
+                                       <setting name="pinsOptions" value="fp"/>
+                                    </struct>
+                                    <struct name="15">
+                                       <setting name="bool_array_item_t" value="false"/>
+                                       <setting name="pinsOptions" value="fp"/>
+                                    </struct>
+                                 </array>
+                              </struct>
+                              <struct name="1">
+                                 <array name="pinsFirstRow">
+                                    <struct name="0">
+                                       <setting name="bool_array_item_t" value="false"/>
+                                       <setting name="pinsOptions" value="fp"/>
+                                    </struct>
+                                    <struct name="1">
+                                       <setting name="bool_array_item_t" value="false"/>
+                                       <setting name="pinsOptions" value="fp"/>
+                                    </struct>
+                                    <struct name="2">
+                                       <setting name="bool_array_item_t" value="false"/>
+                                       <setting name="pinsOptions" value="fp"/>
+                                    </struct>
+                                    <struct name="3">
+                                       <setting name="bool_array_item_t" value="false"/>
+                                       <setting name="pinsOptions" value="fp"/>
+                                    </struct>
+                                    <struct name="4">
+                                       <setting name="bool_array_item_t" value="false"/>
+                                       <setting name="pinsOptions" value="fp"/>
+                                    </struct>
+                                    <struct name="5">
+                                       <setting name="bool_array_item_t" value="true"/>
+                                       <setting name="pinsOptions" value="fp"/>
+                                    </struct>
+                                    <struct name="6">
+                                       <setting name="bool_array_item_t" value="true"/>
+                                       <setting name="pinsOptions" value="fp"/>
+                                    </struct>
+                                    <struct name="7">
+                                       <setting name="bool_array_item_t" value="false"/>
+                                       <setting name="pinsOptions" value="fp"/>
+                                    </struct>
+                                    <struct name="8">
+                                       <setting name="bool_array_item_t" value="true"/>
+                                       <setting name="pinsOptions" value="bp"/>
+                                    </struct>
+                                    <struct name="9">
+                                       <setting name="bool_array_item_t" value="false"/>
+                                       <setting name="pinsOptions" value="fp"/>
+                                    </struct>
+                                    <struct name="10">
+                                       <setting name="bool_array_item_t" value="false"/>
+                                       <setting name="pinsOptions" value="fp"/>
+                                    </struct>
+                                    <struct name="11">
+                                       <setting name="bool_array_item_t" value="false"/>
+                                       <setting name="pinsOptions" value="fp"/>
+                                    </struct>
+                                    <struct name="12">
+                                       <setting name="bool_array_item_t" value="false"/>
+                                       <setting name="pinsOptions" value="fp"/>
+                                    </struct>
+                                    <struct name="13">
+                                       <setting name="bool_array_item_t" value="false"/>
+                                       <setting name="pinsOptions" value="fp"/>
+                                    </struct>
+                                    <struct name="14">
+                                       <setting name="bool_array_item_t" value="false"/>
+                                       <setting name="pinsOptions" value="fp"/>
+                                    </struct>
+                                    <struct name="15">
+                                       <setting name="bool_array_item_t" value="false"/>
+                                       <setting name="pinsOptions" value="fp"/>
+                                    </struct>
+                                 </array>
+                                 <array name="pinsSecondRow">
+                                    <struct name="0">
+                                       <setting name="bool_array_item_t" value="false"/>
+                                       <setting name="pinsOptions" value="fp"/>
+                                    </struct>
+                                    <struct name="1">
+                                       <setting name="bool_array_item_t" value="false"/>
+                                       <setting name="pinsOptions" value="fp"/>
+                                    </struct>
+                                    <struct name="2">
+                                       <setting name="bool_array_item_t" value="false"/>
+                                       <setting name="pinsOptions" value="fp"/>
+                                    </struct>
+                                    <struct name="3">
+                                       <setting name="bool_array_item_t" value="false"/>
+                                       <setting name="pinsOptions" value="fp"/>
+                                    </struct>
+                                    <struct name="4">
+                                       <setting name="bool_array_item_t" value="true"/>
+                                       <setting name="pinsOptions" value="bp"/>
+                                    </struct>
+                                    <struct name="5">
+                                       <setting name="bool_array_item_t" value="true"/>
+                                       <setting name="pinsOptions" value="fp"/>
+                                    </struct>
+                                    <struct name="6">
+                                       <setting name="bool_array_item_t" value="false"/>
+                                       <setting name="pinsOptions" value="fp"/>
+                                    </struct>
+                                    <struct name="7">
+                                       <setting name="bool_array_item_t" value="false"/>
+                                       <setting name="pinsOptions" value="fp"/>
+                                    </struct>
+                                    <struct name="8">
+                                       <setting name="bool_array_item_t" value="false"/>
+                                       <setting name="pinsOptions" value="fp"/>
+                                    </struct>
+                                    <struct name="9">
+                                       <setting name="bool_array_item_t" value="false"/>
+                                       <setting name="pinsOptions" value="fp"/>
+                                    </struct>
+                                    <struct name="10">
+                                       <setting name="bool_array_item_t" value="false"/>
+                                       <setting name="pinsOptions" value="fp"/>
+                                    </struct>
+                                    <struct name="11">
+                                       <setting name="bool_array_item_t" value="false"/>
+                                       <setting name="pinsOptions" value="fp"/>
+                                    </struct>
+                                    <struct name="12">
+                                       <setting name="bool_array_item_t" value="false"/>
+                                       <setting name="pinsOptions" value="fp"/>
+                                    </struct>
+                                    <struct name="13">
+                                       <setting name="bool_array_item_t" value="false"/>
+                                       <setting name="pinsOptions" value="fp"/>
+                                    </struct>
+                                    <struct name="14">
+                                       <setting name="bool_array_item_t" value="false"/>
+                                       <setting name="pinsOptions" value="fp"/>
+                                    </struct>
+                                    <struct name="15">
+                                       <setting name="bool_array_item_t" value="false"/>
+                                       <setting name="pinsOptions" value="fp"/>
+                                    </struct>
+                                 </array>
+                              </struct>
+                           </array>
+                           <setting name="enableFaultConfig" value="false"/>
+                           <struct name="faultConfig_struct">
+                              <setting name="faultDetectBackPlaneEnable" value="false"/>
+                              <setting name="faultDetectPinIndex" value="0"/>
+                              <struct name="clock_config">
+                                 <setting name="clockSource" value="BusInterfaceClock"/>
+                                 <setting name="clockSourceFreq" value="ClocksTool_DefaultInit"/>
+                              </struct>
+                              <setting name="faultPrescaler" value="kSLCD_FaultSampleFreqDivider1"/>
+                              <setting name="width" value="kSLCD_FaultDetectWindowWidth4SampleClk"/>
+                              <set name="interruptSources">
+                                 <selected/>
+                              </set>
+                              <setting name="faultDetectIntEnable" value="false"/>
+                              <struct name="interrupt">
+                                 <setting name="IRQn" value="LCD_IRQn"/>
+                                 <setting name="enable_interrrupt" value="enabled"/>
+                                 <setting name="enable_priority" value="false"/>
+                                 <setting name="priority" value="0"/>
+                                 <setting name="enable_custom_name" value="false"/>
+                              </struct>
+                           </struct>
+                        </struct>
+                     </config_set>
+                  </instance>
+                  <instance name="LLWU" uuid="22a9d3af-4b4f-4f1a-8b2c-696e7dc1c8e8" type="llwu" type_id="llwu_2.0.1" mode="LLWU_GENERAL" peripheral="LLWU" enabled="false" comment="" custom_name_enabled="false" editing_lock="false">
+                     <config_set name="fsl_llwu">
+                        <setting name="enable_irq" value="false"/>
+                        <struct name="interrupt">
+                           <setting name="IRQn" value="LLWU_IRQn"/>
+                           <setting name="enable_interrrupt" value="enabled"/>
+                           <setting name="enable_priority" value="false"/>
+                           <setting name="priority" value="0"/>
+                           <setting name="enable_custom_name" value="false"/>
+                        </struct>
+                        <array name="input_pins"/>
+                        <array name="internal_modules"/>
+                     </config_set>
+                  </instance>
+                  <instance name="LPUART0" uuid="d477528d-8345-49aa-85f1-67ea3f31323a" type="lpuart_cmsis" type_id="lpuart_cmsis_2.4.0" mode="interrupt" peripheral="LPUART0" enabled="true" comment="" custom_name_enabled="false" editing_lock="false">
+                     <config_set name="general">
+                        <struct name="main_config">
+                           <setting name="operationMode" value="ARM_USART_MODE_ASYNCHRONOUS"/>
+                           <setting name="clockSource" value="LpuartClock"/>
+                           <setting name="clockSourceFreq" value="BOARD_BootClockVLPR"/>
+                           <setting name="power_state" value="ARM_POWER_FULL"/>
+                           <setting name="baudRate_Bps" value="115200"/>
+                           <setting name="dataBits" value="ARM_USART_DATA_BITS_8"/>
+                           <setting name="parityBit" value="ARM_USART_PARITY_NONE"/>
+                           <setting name="stopBit" value="ARM_USART_STOP_BITS_1"/>
+                           <setting name="enableRX" value="false"/>
+                           <setting name="enableRXBuffer" value="true"/>
+                           <setting name="enableTX" value="false"/>
+                           <setting name="signalEventFunctionId" value="LPUART0_SignalEvent"/>
+                           <setting name="enableGetFreqFnCustomName" value="false"/>
+                           <setting name="getFreqFunctionCustomID" value="LPUART0_GetFreq"/>
+                           <setting name="enableInitPinsFnCustomName" value="false"/>
+                           <setting name="initPinFunctionCustomID" value="LPUART0_InitPins"/>
+                           <setting name="enableDeinitPinsFnCustomName" value="false"/>
+                           <setting name="deinitPinFunctionCustomID" value="LPUART0_DeinitPins"/>
+                        </struct>
+                     </config_set>
+                     <config_set name="fsl_cmsis_uart" quick_selection="default_edma">
+                        <struct name="interrupt">
+                           <setting name="IRQn" value="LPUART0_IRQn"/>
+                           <setting name="enable_priority" value="false"/>
+                           <setting name="priority" value="0"/>
+                        </struct>
+                     </config_set>
+                  </instance>
+               </instances>
+            </functional_group>
+         </functional_groups>
+         <components>
+            <component name="system" uuid="e38d32a6-2dc4-48b2-9757-cab80617e2c0" type_id="system_54b53072540eeeb8f8e9343e71f28176">
+               <config_set_global name="global_system_definitions">
+                  <setting name="user_definitions" value=""/>
+                  <setting name="user_includes" value=""/>
+                  <setting name="global_init" value=""/>
+               </config_set_global>
+            </component>
+            <component name="uart_cmsis_common" uuid="2e988505-8e07-46bc-a067-c2eff9d6868f" type_id="uart_cmsis_common_9cb8e302497aa696fdbb5a4fd622c2a8">
+               <config_set_global name="global_USART_CMSIS_common" quick_selection="default">
+                  <struct name="commonSetting">
+                     <setting name="USART_RX_BUFFER_LEN" value="64"/>
+                  </struct>
+               </config_set_global>
+            </component>
+            <component name="gpio_adapter_common" uuid="62a9808e-7397-411e-9329-ca65e97bdf20" type_id="gpio_adapter_common_57579b9ac814fe26bf95df0a384c36b6">
+               <config_set_global name="global_gpio_adapter_common" quick_selection="default"/>
+            </component>
+            <component name="msg" uuid="ab3618cc-250a-4328-86bc-e8f603724545" type_id="msg">
+               <config_set_global name="global_messages"/>
+            </component>
+            <component name="generic_uart" uuid="ad291d73-a0ef-4c43-aa5e-062950acbcce" type_id="generic_uart">
+               <config_set_global name="global_uart"/>
+            </component>
+            <component name="generic_enet" uuid="40ffe008-8056-4d24-af21-20669f1c47bf" type_id="generic_enet">
+               <config_set_global name="global_enet"/>
+            </component>
+            <component name="generic_can" uuid="ddccfa70-ae3f-43b8-9384-ae63f597edf8" type_id="generic_can">
+               <config_set_global name="global_can"/>
+            </component>
+         </components>
+      </periphs>
+      <tee name="TEE" version="9.0" enabled="false" update_project_code="true">
+         <generated_project_files/>
+         <tee_profile>
+            <processor_version>N/A</processor_version>
+         </tee_profile>
+      </tee>
+   </tools>
+</configuration>

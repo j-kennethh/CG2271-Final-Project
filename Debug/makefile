@@ -13,6 +13,7 @@ RM := rm -rf
 -include utilities/subdir.mk
 -include startup/subdir.mk
 -include source/subdir.mk
+-include slcd/subdir.mk
 -include freertos/freertos-kernel/portable/MemMang/subdir.mk
 -include freertos/freertos-kernel/portable/GCC/ARM_CM0/subdir.mk
 -include freertos/freertos-kernel/subdir.mk

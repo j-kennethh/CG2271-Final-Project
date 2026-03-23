@@ -23,6 +23,7 @@ drivers \
 freertos/freertos-kernel \
 freertos/freertos-kernel/portable/GCC/ARM_CM0 \
 freertos/freertos-kernel/portable/MemMang \
+slcd \
 source \
 startup \
 utilities/debug_console \

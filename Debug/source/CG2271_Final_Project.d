@@ -52,6 +52,7 @@ source/CG2271_Final_Project.o source/CG2271_Final_Project.d: \
  C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\drivers/fsl_common.h \
  C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\drivers/fsl_gpio.h \
  C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\board/peripherals.h \
+ C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\drivers/fsl_slcd.h \
  C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\board/pin_mux.h \
  C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\board/clock_config.h \
  C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\utilities\debug_console/fsl_debug_console.h \
@@ -124,6 +125,7 @@ C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\drivers/f
 C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\drivers/fsl_common.h:
 C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\drivers/fsl_gpio.h:
 C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\board/peripherals.h:
+C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\drivers/fsl_slcd.h:
 C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\board/pin_mux.h:
 C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\board/clock_config.h:
 C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\utilities\debug_console/fsl_debug_console.h:

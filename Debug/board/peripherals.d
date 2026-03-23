@@ -47,7 +47,8 @@ board/peripherals.o board/peripherals.d: ../board/peripherals.c \
  C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\device\periph2/PERI_VREF.h \
  C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\drivers/fsl_common_arm.h \
  C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\drivers/fsl_clock.h \
- C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\drivers/fsl_common.h
+ C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\drivers/fsl_common.h \
+ C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\drivers/fsl_slcd.h
 ../board/peripherals.h:
 C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\drivers/fsl_common.h:
 C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\device/fsl_device_registers.h:
@@ -97,3 +98,4 @@ C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\device\pe
 C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\drivers/fsl_common_arm.h:
 C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\drivers/fsl_clock.h:
 C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\drivers/fsl_common.h:
+C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\drivers/fsl_slcd.h:

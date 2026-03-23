@@ -1,0 +1,3 @@
+../slcd/slcd_engine.c:12:9:SLCD_Engine_Show_Num	48	static
+../slcd/slcd_engine.c:34:9:SLCD_Engine_Show_Icon	48	static
+../slcd/slcd_engine.c:98:6:SLCD_Engine_Init	16	static
