@@ -11,6 +11,7 @@
  **********************************************************************************************************************/
 #include "fsl_common.h"
 #include "fsl_slcd.h"
+#include "fsl_lpuart_cmsis.h"
 
 #if defined(__cplusplus)
 extern "C" {
@@ -25,12 +26,22 @@ extern "C" {
 #define LCD_PERIPHERAL ((LCD_Type *)LCD)
 /* Definition of the clock source */
 #define LCD_CLOCK_SOURCE LCD_CLK_SRC
+/* Definition of peripheral ID */
+#define LPUART0_PERIPHERAL Driver_USART0
+/* Definition of the clock source frequency */
+#define LPUART0_CLOCK_SOURCE_FREQ 48000000UL
 
 /***********************************************************************************************************************
  * Global variables
  **********************************************************************************************************************/
 extern slcd_config_t LCD_config;
 extern slcd_clock_config_t clkConfig;
+
+/***********************************************************************************************************************
+ * Global functions
+ **********************************************************************************************************************/
+/* Get clock source frequency function for component LPUART0 */
+uint32_t LPUART0_GetFreq(void);
 
 /***********************************************************************************************************************
  * Initialization functions

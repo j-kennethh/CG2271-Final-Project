@@ -1,5 +1,6 @@
 C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\drivers/fsl_slcd.h:405:20:SLCD_StartDisplay	16	static
 ../board/peripherals.c:351:13:LCD_init	8	static
-../board/peripherals.c:401:13:LPUART0_init	8	static
-../board/peripherals.c:408:6:BOARD_InitPeripherals	8	static
-../board/peripherals.c:418:6:BOARD_InitBootPeripherals	8	static
+../board/peripherals.c:401:10:LPUART0_GetFreq	8	static
+../board/peripherals.c:405:13:LPUART0_init	8	static
+../board/peripherals.c:421:6:BOARD_InitPeripherals	8	static
+../board/peripherals.c:431:6:BOARD_InitBootPeripherals	8	static

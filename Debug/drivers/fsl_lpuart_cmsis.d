@@ -1,8 +1,6 @@
-source/CG2271_Final_Project.o source/CG2271_Final_Project.d: \
- ../source/CG2271_Final_Project.c \
- C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\board/board.h \
- C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\board/clock_config.h \
- C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\drivers/fsl_common.h \
+drivers/fsl_lpuart_cmsis.o drivers/fsl_lpuart_cmsis.d: \
+ ../drivers/fsl_lpuart_cmsis.c ../drivers/fsl_lpuart_cmsis.h \
+ ../drivers/fsl_common.h \
  C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\device/fsl_device_registers.h \
  C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\device/MCXC444.h \
  C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\device\periph2/PERI_ADC.h \
@@ -47,43 +45,14 @@ source/CG2271_Final_Project.o source/CG2271_Final_Project.d: \
  C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\device\periph2/PERI_UART.h \
  C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\device\periph2/PERI_USB.h \
  C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\device\periph2/PERI_VREF.h \
- C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\drivers/fsl_common_arm.h \
- C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\drivers/fsl_clock.h \
- C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\drivers/fsl_common.h \
- C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\drivers/fsl_gpio.h \
- C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\board/peripherals.h \
- C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\drivers/fsl_slcd.h \
- C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\drivers/fsl_lpuart_cmsis.h \
+ ../drivers/fsl_common_arm.h ../drivers/fsl_clock.h \
  C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\CMSIS_driver\Include/Driver_USART.h \
  C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\CMSIS_driver\Include/Driver_Common.h \
  C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\board/RTE_Device.h \
- C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\drivers/fsl_lpuart.h \
- C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\drivers/fsl_dmamux.h \
- C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\drivers/fsl_lpuart_dma.h \
- C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\drivers/fsl_dma.h \
- C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\board/pin_mux.h \
- C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\board/clock_config.h \
- C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\utilities\debug_console/fsl_debug_console.h \
- C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\component\serial_manager/fsl_component_serial_manager.h \
- C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\component\serial_manager/fsl_component_serial_port_uart.h \
- C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\component\uart/fsl_adapter_uart.h \
- C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\freertos\freertos-kernel\include/FreeRTOS.h \
- C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\freertos\freertos-kernel\template/FreeRTOSConfig.h \
- C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\freertos\freertos-kernel\template\ARM_CM0/FreeRTOSConfig_Gen.h \
- C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\freertos\freertos-kernel\include/projdefs.h \
- C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\freertos\freertos-kernel\include/portable.h \
- C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\freertos\freertos-kernel\include/deprecated_definitions.h \
- C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\freertos\freertos-kernel\portable\GCC\ARM_CM0/portmacro.h \
- C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\freertos\freertos-kernel\include/mpu_wrappers.h \
- C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\freertos\freertos-kernel\include/task.h \
- C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\freertos\freertos-kernel\include/list.h \
- C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\freertos\freertos-kernel\include/queue.h \
- C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\freertos\freertos-kernel\include/task.h \
- C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\freertos\freertos-kernel\include/semphr.h \
- C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\freertos\freertos-kernel\include/queue.h
-C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\board/board.h:
-C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\board/clock_config.h:
-C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\drivers/fsl_common.h:
+ ../drivers/fsl_lpuart.h ../drivers/fsl_dmamux.h \
+ ../drivers/fsl_lpuart_dma.h ../drivers/fsl_dma.h
+../drivers/fsl_lpuart_cmsis.h:
+../drivers/fsl_common.h:
 C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\device/fsl_device_registers.h:
 C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\device/MCXC444.h:
 C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\device\periph2/PERI_ADC.h:
@@ -128,37 +97,12 @@ C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\device\pe
 C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\device\periph2/PERI_UART.h:
 C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\device\periph2/PERI_USB.h:
 C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\device\periph2/PERI_VREF.h:
-C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\drivers/fsl_common_arm.h:
-C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\drivers/fsl_clock.h:
-C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\drivers/fsl_common.h:
-C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\drivers/fsl_gpio.h:
-C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\board/peripherals.h:
-C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\drivers/fsl_slcd.h:
-C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\drivers/fsl_lpuart_cmsis.h:
+../drivers/fsl_common_arm.h:
+../drivers/fsl_clock.h:
 C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\CMSIS_driver\Include/Driver_USART.h:
 C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\CMSIS_driver\Include/Driver_Common.h:
 C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\board/RTE_Device.h:
-C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\drivers/fsl_lpuart.h:
-C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\drivers/fsl_dmamux.h:
-C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\drivers/fsl_lpuart_dma.h:
-C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\drivers/fsl_dma.h:
-C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\board/pin_mux.h:
-C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\board/clock_config.h:
-C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\utilities\debug_console/fsl_debug_console.h:
-C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\component\serial_manager/fsl_component_serial_manager.h:
-C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\component\serial_manager/fsl_component_serial_port_uart.h:
-C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\component\uart/fsl_adapter_uart.h:
-C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\freertos\freertos-kernel\include/FreeRTOS.h:
-C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\freertos\freertos-kernel\template/FreeRTOSConfig.h:
-C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\freertos\freertos-kernel\template\ARM_CM0/FreeRTOSConfig_Gen.h:
-C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\freertos\freertos-kernel\include/projdefs.h:
-C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\freertos\freertos-kernel\include/portable.h:
-C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\freertos\freertos-kernel\include/deprecated_definitions.h:
-C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\freertos\freertos-kernel\portable\GCC\ARM_CM0/portmacro.h:
-C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\freertos\freertos-kernel\include/mpu_wrappers.h:
-C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\freertos\freertos-kernel\include/task.h:
-C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\freertos\freertos-kernel\include/list.h:
-C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\freertos\freertos-kernel\include/queue.h:
-C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\freertos\freertos-kernel\include/task.h:
-C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\freertos\freertos-kernel\include/semphr.h:
-C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\freertos\freertos-kernel\include/queue.h:
+../drivers/fsl_lpuart.h:
+../drivers/fsl_dmamux.h:
+../drivers/fsl_lpuart_dma.h:
+../drivers/fsl_dma.h:

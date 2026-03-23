@@ -6,7 +6,7 @@
  * Generated linker script file for MCXC444
  * Created from library.ldt by FMCreateLinkLibraries
  * Using Freemarker v2.3.30
- * MCUXpresso IDE v25.6 [Build 136] [2025-06-27] on 23 Mar 2026, 11:28:01 pm
+ * MCUXpresso IDE v25.6 [Build 136] [2025-06-27] on 23 Mar 2026, 11:51:53 pm
  */
 
 GROUP (

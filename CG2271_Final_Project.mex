@@ -411,6 +411,7 @@
             </dependency>
          </dependencies>
          <generated_project_files>
+            <file path="board/RTE_Device.h" update_enabled="true"/>
             <file path="board/peripherals.c" update_enabled="true"/>
             <file path="board/peripherals.h" update_enabled="true"/>
          </generated_project_files>
@@ -772,7 +773,7 @@
                         <struct name="main_config">
                            <setting name="operationMode" value="ARM_USART_MODE_ASYNCHRONOUS"/>
                            <setting name="clockSource" value="LpuartClock"/>
-                           <setting name="clockSourceFreq" value="BOARD_BootClockVLPR"/>
+                           <setting name="clockSourceFreq" value="ClocksTool_DefaultInit"/>
                            <setting name="power_state" value="ARM_POWER_FULL"/>
                            <setting name="baudRate_Bps" value="115200"/>
                            <setting name="dataBits" value="ARM_USART_DATA_BITS_8"/>
@@ -781,7 +782,7 @@
                            <setting name="enableRX" value="false"/>
                            <setting name="enableRXBuffer" value="true"/>
                            <setting name="enableTX" value="false"/>
-                           <setting name="signalEventFunctionId" value="LPUART0_SignalEvent"/>
+                           <setting name="signalEventFunctionId" value="NULL"/>
                            <setting name="enableGetFreqFnCustomName" value="false"/>
                            <setting name="getFreqFunctionCustomID" value="LPUART0_GetFreq"/>
                            <setting name="enableInitPinsFnCustomName" value="false"/>

@@ -48,7 +48,15 @@ board/peripherals.o board/peripherals.d: ../board/peripherals.c \
  C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\drivers/fsl_common_arm.h \
  C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\drivers/fsl_clock.h \
  C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\drivers/fsl_common.h \
- C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\drivers/fsl_slcd.h
+ C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\drivers/fsl_slcd.h \
+ C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\drivers/fsl_lpuart_cmsis.h \
+ C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\CMSIS_driver\Include/Driver_USART.h \
+ C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\CMSIS_driver\Include/Driver_Common.h \
+ C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\board/RTE_Device.h \
+ C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\drivers/fsl_lpuart.h \
+ C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\drivers/fsl_dmamux.h \
+ C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\drivers/fsl_lpuart_dma.h \
+ C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\drivers/fsl_dma.h
 ../board/peripherals.h:
 C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\drivers/fsl_common.h:
 C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\device/fsl_device_registers.h:
@@ -99,3 +107,11 @@ C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\drivers/f
 C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\drivers/fsl_clock.h:
 C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\drivers/fsl_common.h:
 C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\drivers/fsl_slcd.h:
+C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\drivers/fsl_lpuart_cmsis.h:
+C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\CMSIS_driver\Include/Driver_USART.h:
+C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\CMSIS_driver\Include/Driver_Common.h:
+C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\board/RTE_Device.h:
+C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\drivers/fsl_lpuart.h:
+C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\drivers/fsl_dmamux.h:
+C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\drivers/fsl_lpuart_dma.h:
+C:\Users\johnk\OneDrive\Documents\Software\cg2271\CG2271_Final_Project\drivers/fsl_dma.h:

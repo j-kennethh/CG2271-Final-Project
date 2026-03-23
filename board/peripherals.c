@@ -373,7 +373,7 @@ instance:
     - main_config:
       - operationMode: 'ARM_USART_MODE_ASYNCHRONOUS'
       - clockSource: 'LpuartClock'
-      - clockSourceFreq: 'BOARD_BootClockVLPR'
+      - clockSourceFreq: 'ClocksTool_DefaultInit'
       - power_state: 'ARM_POWER_FULL'
       - baudRate_Bps: '115200'
       - dataBits: 'ARM_USART_DATA_BITS_8'
@@ -382,7 +382,7 @@ instance:
       - enableRX: 'false'
       - enableRXBuffer: 'true'
       - enableTX: 'false'
-      - signalEventFunctionId: 'LPUART0_SignalEvent'
+      - signalEventFunctionId: 'NULL'
       - enableGetFreqFnCustomName: 'false'
       - getFreqFunctionCustomID: 'LPUART0_GetFreq'
       - enableInitPinsFnCustomName: 'false'
@@ -397,9 +397,22 @@ instance:
     - quick_selection: 'default_edma'
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
 /* clang-format on */
+/* Get clock source frequency */
+uint32_t LPUART0_GetFreq(void){
+  return LPUART0_CLOCK_SOURCE_FREQ;
+};
 
 static void LPUART0_init(void) {
-  /* Configuration of the component LPUART0 of functional group BOARD_InitPeripherals is not valid. */
+  /* Initialize CMSIS USART */
+  LPUART0_PERIPHERAL.Initialize(NULL);
+  /* Power control of CMSIS USART */
+  LPUART0_PERIPHERAL.PowerControl(ARM_POWER_FULL);
+  /* Control of CMSIS USART */
+  LPUART0_PERIPHERAL.Control(ARM_USART_MODE_ASYNCHRONOUS | ARM_USART_DATA_BITS_8 | ARM_USART_PARITY_NONE | ARM_USART_STOP_BITS_1, 115200);
+  /* Enable or disable receiver. */
+  LPUART0_PERIPHERAL.Control(ARM_USART_CONTROL_RX , 0);
+  /* Enable or disable transmitter. */
+  LPUART0_PERIPHERAL.Control(ARM_USART_CONTROL_TX , 0);
 }
 
 /***********************************************************************************************************************
